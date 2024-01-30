@@ -1,0 +1,22 @@
+import java.util.Scanner;
+public class BecaAlumno {
+    public static void main (String[] args ){
+        Scanner sc = new Scanner(System.in);
+        double media=0;
+        int cantidadBeca=0;
+        do {
+
+        System.out.println("Ingrese nota media del alumno: ");
+        media = sc.nextDouble();
+        if (media < 0 || media > 10) System.out.println("Media fuera de rango.");
+        } while(media < 0 || media > 10);
+        if (media >= 9 && media <= 10) cantidadBeca = 1000;
+        else if (media >= 8) cantidadBeca = 600;
+        else if (media >= 5) cantidadBeca = 300;
+        else System.out.println("Tu media no es aprobada");
+
+        System.out.println("Tu media es: " + media+
+                "\nRecibirás " + cantidadBeca + " euros de beca");
+
+    }
+}
